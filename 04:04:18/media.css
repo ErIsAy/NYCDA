@@ -1,0 +1,49 @@
+#box1 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: inline-block;
+  margin: 20px;
+}
+
+#box2 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: inline-block;
+  margin: 20px;
+}
+#box3 {
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  display: inline-block;
+  margin: 20px;
+}
+
+@media (max-width: 768px){
+  #box1{
+    background-color: blue;
+    width: 150px;
+    display: block;
+    height: 100px;
+
+  }
+
+  #box2{
+    background-color: blue;
+    width: 150px;
+    display: block;
+    height: 100px;
+
+  }
+
+  #box3{
+    background-color: blue;
+    width: 150px;
+    display: block;
+    height: 100px;
+  }
+
+  }
+}

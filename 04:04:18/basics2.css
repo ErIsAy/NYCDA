@@ -1,0 +1,51 @@
+.p1{
+  width: 200;
+  display: block;
+  border: 10px dotted red;
+}
+
+.p2 {
+  width: 200;
+  display: block;
+  border: 10px dotted red;
+}
+
+.p3 {
+  width: 200;
+  display: inline-block;
+  border: 10px dotted red;
+}
+
+.p4 {
+  width: 200;
+  display: block;
+  border: 10px dotted red;
+}
+
+.s1 {
+  width: 200;
+  display: block;
+  border: 5px dotted blue;
+  color: red;
+}
+
+.s2 {
+  width: 200;
+  display: block;
+  border: 5px dotted blue;
+  color: red;
+}
+
+.s3 {
+  width: 200;
+  display: block;
+  border: 5px dotted blue;
+  color: red;
+}
+
+.s4{
+  width: 200;
+  display: block;
+  border: 5px dotted blue;
+  color: red;
+}
