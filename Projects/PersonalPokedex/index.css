@@ -1,0 +1,47 @@
+@font-face {
+     font-family: 'pokemon_gbregular';
+     src: url('pokemon_gb-webfont.woff2') format('woff2'), url('pokemon_gb-webfont.woff') format('woff');
+     font-weight: normal;
+     font-style: normal;
+}
+ body{
+     background: #3661ac;
+     font-family: 'pokemon_gbregular';
+     text-transform: capitalize;
+     margin-top: 5%;
+}
+ .col-sm-4{
+}
+ .card-title {
+     text-transform: capitalize;
+     text-align: center;
+}
+ .card-body {
+     background-color: #dfe6e9;
+}
+ .card-header {
+     color: white;
+     font-size: 20px;
+}
+ .col-centered{
+     float: none;
+     margin: 0 auto;
+}
+ tr {
+     background-color: #e17055;
+     color: white;
+     font-size: 18px;
+     text-align: center;
+}
+ td {
+     text-align: center;
+     width: 50%;
+}
+ img{
+   margin-top: 30px;
+   margin-left: 30px;
+  }
+ .pokeimg-three{
+   width: 240px;
+   margin-top: 68px;
+ }

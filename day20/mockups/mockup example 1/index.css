@@ -1,0 +1,23 @@
+body{
+	background-color: #303030;
+}
+
+.col-lg-12{
+	height: 80px;
+	text-align: center;
+	background-color: #EB5757;
+}
+
+.head-text{
+	margin: 20px;
+	color: white;
+}
+
+.card{
+	border: 0;
+	margin: 15px;
+}
+
+.container-fluid{
+	display: fixed;
+}

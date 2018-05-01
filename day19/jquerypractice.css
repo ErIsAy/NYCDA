@@ -1,0 +1,11 @@
+.col-lg-4.myClass{
+  background-color: black;
+  height: 100px;
+  margin:1px;
+}
+
+.col-lg-8{
+  background-color: gray;
+  height: 100px;
+  margin:1px;
+}
