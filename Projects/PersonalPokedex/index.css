@@ -4,6 +4,12 @@
      font-weight: normal;
      font-style: normal;
 }
+ .navbar-brand {
+     font-weight: 800;
+}
+ .navbar-brand img {
+     width: 24px;
+}
  body{
      background: #3661ac;
      font-family: 'pokemon_gbregular';
@@ -38,10 +44,10 @@
      width: 50%;
 }
  img{
-   margin-top: 30px;
-   margin-left: 30px;
-  }
- .pokeimg-three{
-   width: 240px;
-   margin-top: 68px;
- }
+     margin-left: 30px;
+}
+ .pokemon-button.pokeimg-three {
+     width: 240px;
+     margin-top: 40px;
+}
+ 
