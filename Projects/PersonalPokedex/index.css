@@ -20,7 +20,8 @@ body {
   margin-top: 5%;
 }
 
-.col-sm-4 {}
+/* I know it's empty but in general you want to avoid modifying boostrap classes */
+.col-sm-4 {} 
 
 .card-title {
   text-transform: capitalize;

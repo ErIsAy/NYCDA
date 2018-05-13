@@ -30,8 +30,9 @@
       </div>
       <div class="card-body">
         <h3 id="poke-name" class="card-title">
-                    </h5>
+                    </h5> <!-- I think this is supposed to be an /h3 ? -->
                     </br>
+                    <!-- avoid using inline styles -->
                     <table style="width:100%" class="table">
                         <tr class="warning">
                             <th>HP</th>
@@ -56,6 +57,7 @@
                         </div>
 
                         <!-- Modal -->
+                        <!-- it's better to not have id's and classes in lower case -->
                         <div class="modal fade" id="ModalCenter" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered" role="document">
                                 <div class="modal-content">
@@ -66,6 +68,7 @@
                                 </button>
                                     </div>
                                     <div class="modal-body">
+                                        <!-- Avoid using inline styles here -->
                                         <table style="width:100%" class="table">
                                             <tr class="warning">
                                                 <th>Accuracy</th>
@@ -92,6 +95,8 @@
         </div>
     </div>
     <script src="index.js" charset="utf-8"></script>
+
+    <!-- be sure to always have your javascript files come after any libraries -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js">
     </script>
 </body>
