@@ -2,7 +2,10 @@
   <h1>
     <%@todos.each do |todo|%>
       <div class="">
-        <%=todo[:name]%>  <br> <%=todo[:notes]%> <hr>
+        <%=todo[:name]%>  <br> <%=todo[:notes]%>
+        <br>
+        <a class="btn btn-danger" href="/edit/<%=%>">Edit</a>
+        <hr>
       </div>
       <!-- <hr> -->
     <%end%>

@@ -1,0 +1,20 @@
+<form class="" action="/notes" method="post">
+  <h1>Editing...</h1>
+  <div class="row">
+    <div class="col">
+      <input type="text" class="form-control" placeholder="Name" name= "edit_name_input" >
+    </div>
+  </div>
+  <br>
+  <div class="row-12">
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1">Description</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name= "edit_note_input"><%=@todo%></textarea>
+    </div>
+  </div>
+  <br>
+  <div class="row-12">
+    <button type="submit" class="btn btn-danger">RE - Post-it</button>
+  </div>
+  <br>
+</form>
