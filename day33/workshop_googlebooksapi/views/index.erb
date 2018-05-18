@@ -1,0 +1,22 @@
+<form class="" action="/" method="post">
+  <input type="text" name="query" value="">
+  <button type="submit" name="button">Search</button>
+</form>
+
+<% if @title == nil %>
+ <h1>Please try again</h1>
+<% else %>
+  <a href="/">Go back home</a>
+ <h1><%=@title%></h1>
+ <h2><%= @author %></h2>
+ <h3><%=@isbn%></h3>
+ <img src="<%=@image_link%>" alt="" width="400px">
+<% end %>
+
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Fluid jumbotron</h1>
+    <p class="lead">jumbotron.</p>
+  </div>
+</div>
