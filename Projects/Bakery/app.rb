@@ -40,7 +40,7 @@ get "/home/muffins" do
   my_muffins = Muffins.new("Biscoff Stuffed Pumpkin", "$5", "/images/Biscoff-Filled-Pumpkin-Mini-Muffins-Square-550x550.jpg")
   my_muffins_two = Muffins.new("Peanut Butter Chocolate Chip", "$6", "/images/Peanut-Butter-Chocolate-Chip-Muffins.jpg")
   my_muffins_three = Muffins.new("Apple Crumble", "$5", "/images/apple-crumble-muffins.jpg")
-  my_muffins_four = Muffins.new("Blueberry Raspberry ", "$7", "/images/blueberryraspberrymuffin1.jpg")
+  my_muffins_four = Muffins.new("Blueberry Raspberry", "$7", "/images/blueberryraspberrymuffin1.jpg")
   my_muffins_five = Muffins.new("Chocolate Chip", "$8", "/images/3937641731_b2381b96b9.jpg")
   my_muffins_six = Muffins.new("Carrot", "$7", "/images/3792682450_32a7988a14.jpg")
   @muffins = [my_muffins, my_muffins_two, my_muffins_three, my_muffins_four, my_muffins_five, my_muffins_six]
