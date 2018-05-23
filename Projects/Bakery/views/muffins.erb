@@ -1,0 +1,10 @@
+<% @muffins.each do |muffin|%>
+<div class="card text-center" style="width: 18rem;">
+  <img class="card-img-top img-thumbnail gallery-img" src=<%= muffin.image %> alt="Card image cap">
+  <div class="card-body">
+    <%= muffin.name %>
+    <br>
+    <%= muffin.price %>
+  </div>
+</div>
+<% end %>
