@@ -1,10 +1,10 @@
 <% @muffins.each do |muffin|%>
-<div class="text-center col-md-4" style="">
-  <img class="card-img-top img-thumbnail gallery-img" src=<%= muffin.image %> alt="Card image cap">
-  <div class="card-body">
-    <%= muffin.name %>
-    <br>
-    <%= muffin.price %>
+  <div class="text-center col-md-4" style="">
+    <img class="card-img-top img-thumbnail gallery-img" src=<%= muffin.image %> alt="Card image cap">
+    <div class="card-body">
+      <%= muffin.name %>
+      <br>
+      <%= muffin.price %>
+    </div>
   </div>
-</div>
 <% end %>

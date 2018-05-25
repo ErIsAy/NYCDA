@@ -14,7 +14,6 @@ body {
 .heading {
     color: #727272;
     letter-spacing: .3em;
-    /* font-size: 6em; */
     font-family: 'Catamaran', sans-serif;
 }
 .sub-heading {
@@ -111,16 +110,3 @@ h3{
 .btn-lg {
  margin-bottom: 18px;
 }
-
-/* col {
-   margin: 50px !important;
-} */
-
-
-/* @media (max-width: 770px){
- .card{
-   float:none;
-   display: block;
-   margin-left: 100px;
- }
-} */

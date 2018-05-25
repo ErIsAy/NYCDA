@@ -17,7 +17,7 @@ post "/" do
   message_params =  { from: 'erisay_22@hotmail.com',
                       to:   @email,
                       subject: 'LA PANADERIA Montly Catalog',
-                      html: erb(:mail_template)
+                      html: erb(:mail_template, :layout => false)
                 }
   mg_client.send_message(ENV['MAILGUN_API_DOMAIN'], message_params)
   erb :index
