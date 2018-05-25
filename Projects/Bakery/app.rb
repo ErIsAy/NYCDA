@@ -20,6 +20,7 @@ post "/" do
                       html: erb(:mail_template)
                 }
   mg_client.send_message(ENV['MAILGUN_API_DOMAIN'], message_params)
+  erb :index
 end
 
 get "/home/cookies" do
