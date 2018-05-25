@@ -14,14 +14,11 @@ post "/" do
   @last_name = params[:last_name]
   @email = params[:email]
   mg_client = Mailgun::Client.new(ENV['MAILGUN_API_KEY'])
-  # Define your message parameters
   message_params =  { from: 'erisay_22@hotmail.com',
                       to:   @email,
-                      subject: 'The Ruby SDK is awesome!',
+                      subject: 'LA PANADERIA Montly Catalog',
                       html: erb(:mail_template)
                 }
-
-  Send your message through the client
   mg_client.send_message(ENV['MAILGUN_API_DOMAIN'], message_params)
 end
 

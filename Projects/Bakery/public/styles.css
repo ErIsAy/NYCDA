@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+ @import url('https://fonts.googleapis.com/css?family=Open+Sans');
  @import url('https://fonts.googleapis.com/css?family=Indie+Flower');
  @import url('https://fonts.googleapis.com/css?family=Catamaran:100');
  body {
@@ -66,20 +66,18 @@
      transform: scale(1.5);
 }
  .footer-form {
-     margin-top: 10px;
-     margin-left: 350px;
-     padding-top: 10px;
-     height: 50px;
      color: aliceblue;
      bottom: 0;
-    /* font-family: 'Indie Flower', cursive;
-     */
+     display: inline-block;
+     /* font-family: 'Indie Flower', cursive; */
+
 }
  .btn .btn-info {
      color: #386EA5 !important;
 }
  .card{
      float:left;
+     display: inline-block;
      margin: 20px;
      font-family: 'Open Sans', sans-serif;
 }
@@ -94,4 +92,15 @@
      font-size: 1.5em;
      font-family: 'Open Sans', sans-serif;
 }
- 
+
+h3{
+  color: #386EA5 !important;
+}
+
+@media (max-width: 770px){
+  .card{
+    float:none;
+    display: block;
+    margin-left: 100px;
+  }
+}
