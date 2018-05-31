@@ -78,7 +78,7 @@ get('/edit/:id') do
 end
 
 post '/edit' do
-    # @post = Post.find_by(id: params[:id])
+    @post = Post.find_by(id: params[:id])
     post = Post.update(
       title: params[:title],
       image: params[:image_url],

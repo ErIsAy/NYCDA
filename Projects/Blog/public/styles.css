@@ -5,3 +5,27 @@
 body {
     background-color: #F1F0EA;
 }
+
+.jumbotron {
+    background: url("./images/EndoSpot.png") no-repeat center center;
+    background-size: cover;
+    background-size: auto 100%;
+    background-color: white !important;
+    color:black !important;
+    height: 300px;
+}
+
+.clinical-case-show{
+    padding: 20px;
+    margin-bottom: 30px;
+}
+
+.footer{
+    background-color: white !important;
+}
+.font-italic {
+    font-size: 4vw;
+}
+.post-img {
+    max-width: 45%;
+}
