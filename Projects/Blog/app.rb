@@ -48,7 +48,8 @@ post('/login') do
 	end
 
     session[:user_id] = user.id
-	redirect '/dashboard'
+    # redirect '/dashboard'
+    redirect '/'
 end
 
 get('/dashboard') do
@@ -64,6 +65,11 @@ post('/dashboard') do
         user_id: session[:user_id]
 	)
     redirect '/'
+end
+
+get('/show/:id') do
+    @post = Post.find_by(id: params[:id])
+    erb :show
 end
 
 get('/edit/:id') do

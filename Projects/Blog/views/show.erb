@@ -1,0 +1,14 @@
+<div class="card">
+    <h2 class="blog-post-title"><%= @post.title %></h2>
+    <p class="blog-post-meta"><%= @post.created_at.strftime("%m/%d/%Y")%><a href="#"> By <%=@post.user.first_name%></a></p>
+
+    <div>
+        <img class="" style="margin: 0 auto;" src=<%= @post.image %> alt="Card image cap" height="250" width: "200">
+    </div>
+    
+    <p>
+    <%= @post.body %>
+    </p>
+
+</div>
+

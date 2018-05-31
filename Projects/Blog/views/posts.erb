@@ -1,24 +1,30 @@
-<%@posts.each do |post|%>
+<div class="row">
+  <% @posts.each do |post|%>
 
-<div class="col-md-6">
-<div class="card flex-md-row mb-4 box-shadow h-md-250">
-  <div class="card-body d-flex flex-column align-items-start">
-    <strong class="d-inline-block mb-2 text-success"><%=post.id%></strong>
-    <h3 class="mb-0">
-      <a class="text-dark" href="#"> <%= post.title %> </a>
-    </h3>
-    <div class="mb-1 text-muted"> <%= post.created_at %> </div>
-    <p class="card-text mb-auto"> <%= post.body %> </p>
-    <a href="#">Continue reading</a>
-    
-        <a class="btn-sm btn-primary " href="/edit/<%=post.id%>">Edit</a>
-        <a class="btn-sm btn-danger " href="/delete/<%=post.id%>">Delete</a>    
-    
-  </div>
-  <img class="card-img-right flex-auto d-none d-lg-block" src=<%= post.image %> alt="Card image cap">
-</div>
-</div>
-</div>
+    <div class="col-md-6">
+      <div class="card flex-md-row mb-4 box-shadow h-md-250">
+        <div class="card-body d-flex flex-column align-items-start">
+          <strong class="d-inline-block mb-2 text-success"><%=post.id%></strong>
+          <h3 class="mb-0">
+            <a class="text-dark  " href="#"> <%= post.title %> </a>
+          </h3>
+          <div class="mb-1 text-muted"> <%= post.created_at.strftime("%m/%d/%Y") %> </div>
+          <p class="card-text mb-auto"> <%= post.body.truncate(70, separator: ' ') %> </p>
+          <a href="/show/<%=post.id%>">Continue reading</a>
+          
+          <div class="btn-group" role="group" aria-label="...">         
+          <%unless @user.nil?%>
+            <a class="btn btn-outline-info" href="/edit/<%=post.id%>">Edit</a>
+            <a class="btn btn-outline-danger" href="/delete/<%=post.id%>">Delete</a>  
+          <%end%>
+          </div>
+      
+          
+        </div>
+        <img class="card-img-right flex-auto d-none d-lg-block" src=<%= post.image %> alt="Card image cap" height="250" width: "200">
+      </div>
+    </div>
 
-<%end%>
 
+  <%end%>
+</div>
