@@ -77,9 +77,9 @@ get('/edit/:id') do
     erb :edit, :layout => false
 end
 
-post '/edit' do
+post '/edit/:id' do
     @post = Post.find_by(id: params[:id])
-    post = Post.update(
+    @post.update(
       title: params[:title],
       image: params[:image_url],
       body: params[:body],

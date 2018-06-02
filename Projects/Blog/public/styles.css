@@ -1,5 +1,8 @@
 .container.card.form-container {
     margin-top: 5rem;
+    -webkit-box-shadow: 0 0 10px black !important;
+    box-shadow: 0 0 10px black !important;
+    border-radius: 10px !important;
 }
 
 body {
@@ -8,11 +11,17 @@ body {
 
 .jumbotron {
     background: url("./images/EndoSpot.png") no-repeat center center;
-    background-size: cover;
-    background-size: auto 100%;
     background-color: white !important;
-    color:black !important;
-    height: 300px;
+    height: 350px;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    background-size: 100% 100%;
+    color:#777877 !important;
+    -webkit-box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px black;
+    border-radius: 10px !important;
+    
 }
 
 .clinical-case-show{
@@ -22,10 +31,15 @@ body {
 
 .footer{
     background-color: white !important;
+    -webkit-box-shadow: 0 0 10px black;
+    box-shadow: 0 0 10px black;
 }
 .font-italic {
     font-size: 4vw;
 }
 .post-img {
     max-width: 45%;
+}
+.dashboard-btn{
+    margin-top: 20px;
 }

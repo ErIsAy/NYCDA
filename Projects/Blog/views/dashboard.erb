@@ -13,19 +13,18 @@
     crossorigin="anonymous">
 
   <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700,900" rel="stylesheet">
-  <link href="styles.css" rel="stylesheet">
+  <link href="/styles.css" rel="stylesheet">
 </head>
 
 <body>
 
   <div class="container">
-    <h1 class="h3 mb-3 font-weight-normal text-center">Post a new Clinical Case</h1>
-    <a class="btn btn-sm btn-outline-secondary" href="/">Back to Home Page</a>
+    <a class="btn btn-sm btn-outline-secondary dashboard-btn" href="/">Back to Home Page</a>
   </div>
 
   <div class="container card form-container">
+    <h1 class="h3 mb-3 font-weight-normal text-center">Post a new Clinical Case</h1>
     <form class="form-group" action="/dashboard" method="POST">
-
       </br>
       <label for="inputName" class="sr-only">Title</label>
       <input type="text" class="form-control" name="title" placeholder="Title" required>
@@ -37,7 +36,7 @@
       <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" placeholder="Body" name="body"></textarea>
       </br>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Post</button>
-      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+      <p class="mt-5 mb-3 text-muted">&copy; EndoSpot 2018</p>
     </form>
   </div>
 </body>
