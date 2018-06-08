@@ -1,4 +1,4 @@
-class Cookies
+class Cookies # class names are always singular and not pluralized
   attr_accessor :name, :price, :image
 
   def initialize(name, price, image)
