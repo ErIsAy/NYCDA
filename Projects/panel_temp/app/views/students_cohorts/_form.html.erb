@@ -1,0 +1,23 @@
+<%= form_for @student_cohort do |f|%>
+
+    <br>
+
+    <div class="">
+      <%= f.label :student_id, 'Select Student:' %><br>
+      <%= f.select :student_id, options_for_select(@students.collect {|i| [ i.f_name, i.id ] }, {include_blank: 'Select Student'})%>
+    </div>
+
+    <br>
+
+    <div class="">
+      <%= f.label :cohort_id, 'Select :' %><br>
+      <%= f.select :cohort_id, options_for_select(@cohorts.collect {|c| [ c.name, c.id ] }, {include_blank: 'Select Cohort'})%>
+    </div>
+
+    <br>
+
+    <div>
+    <%= f.submit %>
+    </div>
+
+<% end %>

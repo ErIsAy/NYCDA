@@ -1,0 +1,39 @@
+<h1>Le panel</h1>
+<%=link_to "Students", students_path,class: ""%>
+<%=link_to "Instructors", instructors_path,class: ""%>
+<%=link_to "Courses", courses_path,class: ""%>
+<%=link_to "Cohorts", cohorts_path,class: ""%>
+
+<%=link_to "Instructors Cohorts", instructors_cohorts_path,class: "ui primary button"%>
+<%=link_to "Students Cohorts", students_cohorts_path%>
+
+<table class="ui striped table">
+  <thead>
+    <tr>
+      <th>Cohort</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th>Student</th>
+      <th>Instructor</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+
+      <tbody>
+        <% @cohorts.each do |cohort|%>
+        <tr>
+          <td><%= cohort.name %></td>
+          <td><%= cohort.start_date %></td>
+          <td><%= cohort.end_date %></td>
+          <td><%= cohort.students_cohorts.student.f_name %> <%= cohorts.students_cohorts.student.l_name %></td>
+          <td><%= cohort.instructor.f_name %> <%= cohort.instructor.l_name %></td>
+          <td> <%=link_to 'Edit', edit_students_cohort_path(student_cohort)%> </td>
+        </tr>
+
+        <%=link_to 'View', cohort_path(cohort)%>
+        <%=link_to 'Delete',cohort_path(cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+
+      <%end%>
+    </tbody>
+
+</table>

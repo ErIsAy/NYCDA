@@ -1,0 +1,31 @@
+<h3>Student Cohor Index</h3>
+
+<%=link_to 'New Student - Cohort' ,new_students_cohort_path%>
+
+<br>
+<br>
+<br>
+
+<% @students_cohorts.each do |student_cohort|%>
+
+  <div class="">
+    <div class="">
+      Student: <%= student_cohort.student.f_name %> <%= student_cohort.student.l_name %>
+    </div>
+    <div class="">
+      Cohort: <%= student_cohort.cohort.name %> <%= student_cohort.cohort.start_date %> - <%= student_cohort.cohort.end_date %>
+    </div>
+  </div>
+
+  <%=link_to 'View', students_cohort_path(student_cohort)%>
+  <%=link_to 'Edit', edit_students_cohort_path(student_cohort)%>
+  <%=link_to 'Delete', students_cohort_path(student_cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+
+<%end%>
+
+<!-- new_students_cohort GET    /students_cohort/new(.:format)                 students_cohort#new
+edit_students_cohort GET    /students_cohort/:id/edit(.:format)                students_cohort#edit
+    students_cohort GET    /students_cohort/:id(.:format)                      students_cohort#show
+                    PATCH  /students_cohort/:id(.:format)                      students_cohort#update
+                    PUT    /students_cohort/:id(.:format)                      students_cohort#update
+                    DELETE /students_cohort/:id(.:format)                      students_cohort#destroy -->

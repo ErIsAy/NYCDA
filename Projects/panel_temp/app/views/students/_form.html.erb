@@ -1,0 +1,39 @@
+<%= form_for @student, :html => {:class => "ui form"} do |f|%>
+
+    <div>
+      <%= f.label :f_name, 'First Name' %><br>
+      <%= f.text_field :f_name %><br>
+    </div>
+
+    <br>
+
+    <div>
+      <%= f.label :l_name, 'Last Name' %><br>
+      <%= f.text_field :l_name %><br>
+    </div>
+
+    <br>
+
+    <div>
+      <%= f.label :date_of_birth, 'Date Of Birth' %><br>
+      <%= f.date_field :date_of_birth %><br>
+    </div>
+
+    <br>
+
+    <div>
+      <%= f.label :highest_completed_education,'Highest Completed Education' %><br>
+      <%= f.select :highest_completed_education, options_for_select(['HS', 'College', 'Masters', 'PHD']), prompt: 'Select One' %>
+    </div>
+
+    <br>
+
+    <div>
+    <%= f.submit %>
+    </div>
+
+<% end %>
+
+
+
+<!-- :f_name, :l_name, :date_of_birth, :highest_completed_education -->

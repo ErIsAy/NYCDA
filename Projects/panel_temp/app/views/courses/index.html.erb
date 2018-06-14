@@ -1,0 +1,19 @@
+<h3>Index Courses</h3>
+
+<a href="<%=new_course_path%>">Create New Course</a>
+
+<% @courses.each do |course|%>
+  <div class="">
+    <div class="">
+      First Name: <%= course.name %>
+    </div>
+    <div class="">
+      Last Name: <%= course.classhours %>
+    </div>
+  </div>
+
+  <%=link_to 'View', course_path(course)%>
+  <%=link_to 'Edit', edit_course_path(course)%>
+  <%=link_to 'Delete', course_path(course), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+
+<%end%>

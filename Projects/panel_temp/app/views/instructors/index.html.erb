@@ -1,0 +1,29 @@
+<h3>instructors</h3>
+
+
+<a href="<%=new_instructor_path%>">Create New Instructor</a>
+
+<% @instructors.each do |instructor|%>
+  <div class="">
+    <div class="">
+      First Name: <%= instructor.f_name %>
+    </div>
+    <div class="">
+      Last Name: <%= instructor.l_name %>
+    </div>
+    <div class="">
+      Date Of Birth: <%= instructor.date_of_birth %>
+    </div>
+    <div class="">
+      Salary: <%= instructor.salary %>
+    </div>
+    <div class="">
+      Highest Completed Education: <%= instructor.highest_completed_education %>
+    </div>
+  </div>
+
+  <%=link_to 'View', instructor_path(instructor)%>
+  <%=link_to 'Edit', edit_instructor_path(instructor)%>
+  <%=link_to 'Delete',instructor_path(instructor), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+
+<%end%>

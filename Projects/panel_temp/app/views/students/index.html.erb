@@ -1,0 +1,38 @@
+<h3>Students</h3>
+
+<a href="<%=new_student_path%>">Create New Student</a>
+
+<% @students.each do |student|%>
+  <div class="">
+    <div class="">
+      First Name: <%= student.f_name %>
+    </div>
+    <div class="">
+      Last Name: <%= student.l_name %>
+    </div>
+    <div class="">
+      Date Of Birth: <%= student.date_of_birth %>
+    </div>
+    <div class="">
+      Highest Completed Education: <%= student.highest_completed_education %>
+    </div>
+  </div>
+
+  <%=link_to 'View', student_path(student)%>
+  <%=link_to 'Edit', edit_student_path(student)%>
+  <%=link_to 'Delete', student_path(student), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+
+<%end%>
+
+
+<!-- :f_name, :l_name, :date_of_birth, :highest_completed_education -->
+<!--
+#
+# students GET    /students(.:format)                                                                      students#index
+#          POST   /students(.:format)                                                                      students#create
+# new_student GET    /students/new(.:format)                                                               students#new
+# edit_student GET    /students/:id/edit(.:format)                                                         students#edit
+#  student GET    /students/:id(.:format)                                                                  students#show
+#          PATCH  /students/:id(.:format)                                                                  students#update
+#          PUT    /students/:id(.:format)                                                                  students#update
+#          DELETE /students/:id(.:format)                                                                  students#destroy -->

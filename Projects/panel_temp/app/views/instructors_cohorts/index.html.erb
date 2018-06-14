@@ -1,0 +1,23 @@
+<h3>Instructor Cohorts</h3>
+
+<%= link_to 'Create Instructor-Cohort', new_instructors_cohort_path%>
+
+<br>
+<br>
+<br>
+
+<% @instructors_cohorts.each do |instructor_cohort|%>
+  <div class="">
+    <div class="">
+      Instructor: <%= instructor_cohort.instructor.f_name %> <%= instructor_cohort.instructor.l_name %>
+    </div>
+    <div class="">
+      Cohort: <%= instructor_cohort.cohort.name %> <%= instructor_cohort.cohort.start_date %> - <%= instructor_cohort.cohort.end_date %>
+    </div>
+  </div>
+
+  <%=link_to 'View', instructors_cohort_path(instructor_cohort)%>
+  <%=link_to 'Edit', edit_instructors_cohort_path(instructor_cohort)%>
+  <%=link_to 'Delete', instructors_cohort_path(instructor_cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+
+<%end%>

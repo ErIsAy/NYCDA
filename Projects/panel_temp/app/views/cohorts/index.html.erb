@@ -1,0 +1,24 @@
+<h3>Index Cohorts</h3>
+
+<a href="<%=new_cohort_path%>">Create New Cohort</a>
+
+<% @cohorts.each do |cohort|%>
+  <div class="">
+    <div class="">
+      Cohort Name: <%= cohort.name %>
+    </div>
+    <div class="">
+      Start Name: <%= cohort.start_date %>
+    </div>
+    <div class="">
+      End Name: <%= cohort.end_date %>
+    </div>
+
+    
+  </div>
+
+  <%=link_to 'View', cohort_path(cohort)%>
+  <%=link_to 'Edit', edit_cohort_path(cohort)%>
+  <%=link_to 'Delete', cohort_path(cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+
+<%end%>

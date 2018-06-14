@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  f_name: 
+  l_name: 
+  date_of_birth: 
+  highest_completed_education: MyString
+
+two:
+  f_name: 
+  l_name: 
+  date_of_birth: 
+  highest_completed_education: MyString
