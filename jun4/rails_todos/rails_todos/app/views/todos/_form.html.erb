@@ -1,0 +1,23 @@
+<% if  @todo.errors.any? %>
+    <ul>
+        <% @todo.errors.full_message.each do |error_message| %>
+        <li><%= error_message %></li>
+        <% end %>        
+    </ul>
+<% end %>
+
+<%= form_for @todo do |f|%>
+    <div>
+    <%=f.label :name%><br>
+    <%=f.text_field :name%><br>
+    </div>
+    <br>
+    <div>
+    <%=f.label :description%><br>
+    <%=f.text_area :description%><br>
+    </div>
+    <br>
+    <div>
+    <%= f.submit %>
+    </div>
+<% end %>

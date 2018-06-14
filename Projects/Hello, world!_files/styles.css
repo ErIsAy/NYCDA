@@ -1,0 +1,27 @@
+body {
+  font-family: 'Pacifico', cursive;
+}
+body {
+  background-image: url("");
+}
+
+div {
+  border: 1px solid red;
+}
+
+header {
+  text-align: center;
+}
+
+.header_bar{
+  background-color: brown;
+}
+footer {
+    text-align: center;
+    background-color: brown;
+}
+
+.card {
+  float: left;
+  margin: 20px;
+}

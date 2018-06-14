@@ -1,0 +1,2 @@
+module MuffinHelper
+end

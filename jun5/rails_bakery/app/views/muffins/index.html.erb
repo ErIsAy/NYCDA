@@ -1,0 +1,17 @@
+<h3>Lo' Muffin Index</h3>
+
+<h3><a href="<%=new_muffin_path%>">Add A New Muffin</a></h3>
+
+<%@muffins.each do |muffin|%>
+  <div> Name:  <%=muffin.name%></div>
+  <div> Description: <%=muffin.description%></div>
+  <div> Diameter: <%=muffin.category%></div>
+  <div> Price: <%=muffin.price%></div>
+  <div> Available Until: <%=muffin.available_until%></div>
+  
+      <div>   
+        <a href="<%= muffins_path(muffin) %>" data-disable-with="Processing...">View</a>    
+        <a href="<%= edit_muffin_path(muffin) %>">Edit</a>
+        <a href="<%= muffin_path(muffin) %>" data-method = 'DELETE'>Delete</a>
+    </div>
+<%end%>

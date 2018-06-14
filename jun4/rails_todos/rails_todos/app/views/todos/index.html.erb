@@ -1,0 +1,45 @@
+<h2>Welcome to my Rails Todo</h2>
+
+<h4>
+  <%= link_to 'Create New Todo', new_todo_path%>
+</h4>
+
+
+<% @todos.each do |todo| %>
+
+<div class="">
+  <%= image_tag image_path('download-2.jpg'), alt: 'My Games'%>
+  <%= image_tag image_path('folder1/download-1.jpg')%>
+  <%= image_tag image_path('folder1/download.jpg')%>
+</div>
+    <div>
+        Name: <%= todo.name %>
+    </div>
+    <div>
+        Description: <%= todo.description %>
+    </div>
+
+    <div class="">
+      comments :
+      <%todo.todo_comments.each do |comment|%>
+        <div class="">
+           <%=comment.content%>
+        </div>
+      <%end%>
+    </div>
+
+
+    <div>
+        <%= link_to 'Add Comment', new_todo_todo_comment_path(todo)%>
+
+        <%= link_to 'View con link_to', todo_path(todo), 'data-disable-with':"Processing..."%>
+        <%= link_to 'View con link_to', edit_todo_path(todo)%>
+        <%= link_to 'delete con link_to', todo_path(todo), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' } %>
+
+        <a href="<%= todo_path(todo) %>" data-disable-with="Processing...">View</a>
+        <a href="<%= edit_todo_path(todo) %>">Edit</a>
+        <a href="<%= todo_path(todo) %>" data-method = 'DELETE'>Delete</a>
+                                            <%# UTJ %>
+    </div>
+    <br>
+<% end %>

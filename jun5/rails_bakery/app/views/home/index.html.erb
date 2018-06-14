@@ -1,0 +1,30 @@
+Home Page
+<h3><a href="<%=muffins_path%>">Muffins</a></h3>
+<h3><a href="<%=cakes_path%>">Cakes</a></h3>
+
+<br>
+<br>
+<br>
+
+<% @cakes.each do |cake| %>
+
+  <div> Name:  <%=cake.name%></div>
+  <div> Description: <%=cake.description%></div>
+  <div> Diameter: <%=cake.diameter%></div>
+  <div> Price: <%=cake.price%></div>
+  <div> Available Until: <%=cake.available_until%></div>
+<%end%>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+<%@muffins.each do |muffin|%>
+  <div> Name:  <%=muffin.name%></div>
+  <div> Description: <%=muffin.description%></div>
+  <div> Diameter: <%=muffin.category%></div>
+  <div> Price: <%=muffin.price%></div>
+  <div> Available Until: <%=muffin.available_until%></div>
+<%end%>
