@@ -10,15 +10,14 @@
   </head>
   <body class="<%= controller_name %> <%= action_name %>">
 
+    <div class="ui bottom attached segment">
 
         <% if user_signed_in? %>
           <%= render :partial => 'layouts/shared/menu' %>
             <% end %>
 
-    <div class="pusher">
-          <%= yield %>
-    </div>
-</div>
+            <%= yield %>
 
+    </div>
   </body>
 </html>
