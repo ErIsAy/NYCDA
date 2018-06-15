@@ -14,3 +14,22 @@
  *= require_tree .
  *= require_self
  */
+
+ body {
+   background-color: #DADADA;
+ }
+ body > .grid {
+   height: 100%;
+ }
+ .image {
+   margin-top: -100px;
+ }
+ .column {
+   max-width: 450px;
+ }
+ .float-right {
+   float: right !important;
+    margin-right: 0.25em;
+    margin-left: 70em;
+    margin-top: 0.7em;
+}

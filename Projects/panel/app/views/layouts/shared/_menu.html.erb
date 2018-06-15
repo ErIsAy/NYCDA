@@ -1,0 +1,38 @@
+<div class="ui bottom attached segment">
+<div class="ui inverted labeled icon left inline vertical sidebar menu">
+  <a class="item" href="/">
+    <i class="home icon" ></i> Home
+  </a>
+  <a class="item" href="/courses">
+    <i class="block layout icon"></i> Courses
+  </a>
+  <a class="item" href="/instructors">
+    <i class="user outline icon"></i> Instructors
+  </a>
+  <a class="item" href="/students">
+    <i class="id card outline icon"></i> Students
+  </a>
+  <a class="item" href="/cohorts">
+    <i class="calendar icon"></i> Cohorts
+  </a>
+</div>
+
+
+<div class="">
+
+  <div class="ui large top fixed hidden menu">
+    <a class="item">
+      <i class="sidebar icon"></i> Menu
+    </a>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: "float-right" %>
+  </div>
+  <br>
+  <br>
+  <br>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="ui container">
+    </div>
+    </div>
+    
+</div>

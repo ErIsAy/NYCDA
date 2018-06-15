@@ -8,45 +8,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+  <body class="<%= controller_name %> <%= action_name %>">
 
-  <body>
-    <div class="ui bottom attached segment">
-    <div class="ui inverted labeled icon left inline vertical demo sidebar menu">
-      <a class="item" href="/">
-        <i class="home icon" ></i> Home
-      </a>
-      <a class="item" href="/courses">
-        <i class="block layout icon"></i> Courses
-      </a>
-      <a class="item" href="/instructors">
-        <i class="user outline icon"></i> Instructors
-      </a>
-      <a class="item" href="/students">
-        <i class="id card outline icon"></i> Students
-      </a>
-      <a class="item" href="/cohorts">
-        <i class="calendar icon"></i> Cohorts
-      </a>
-    </div>
+
+        <% if user_signed_in? %>
+          <%= render :partial => 'layouts/shared/menu' %>
+            <% end %>
 
     <div class="pusher">
-    <div class="">
-
-      <div class="ui large top fixed hidden menu">
-        <a class="item">
-          <i class="sidebar icon"></i> Menu
-        </a>
-      </div>
-
-        <div class="ui container">
-              <%= yield %>
-        </div>
-        </div>
+          <%= yield %>
     </div>
-    </div>
-
 </div>
-
 
   </body>
 </html>
