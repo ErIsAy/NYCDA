@@ -8,16 +8,17 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body class="<%= controller_name %> <%= action_name %>">
+  <body class="<%= controller_name %> <%= action_name %> ui bottom attached segment">
 
-    <div class="ui bottom attached segment">
 
         <% if user_signed_in? %>
           <%= render :partial => 'layouts/shared/menu' %>
             <% end %>
 
-            <%= yield %>
 
-    </div>
+      <%= yield %>
+
+
+
   </body>
 </html>

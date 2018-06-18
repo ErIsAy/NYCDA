@@ -19,10 +19,89 @@
 
 
 document.addEventListener("turbolinks:load", function() {
+// Sidenav
   $('.ui.sidebar').sidebar({
       context: $('.bottom.segment')
     })
     .sidebar('attach events', '.menu .item');
+
+// Delete courses
+    if (document.querySelector('body.courses.index') == undefined) {
+  		return;
+  	}
+
+    $('.delete-course').click(function (e) {
+  e.preventDefault();
+  let deletionUrl = e.target.getAttribute('href');
+
+  $.ajax({
+    method: 'DELETE',
+    url: deletionUrl,
+    success: function (data) {
+      $(e.target).parents('.main-course').remove();
+      toastr.success('Your todo has been successfully deleted');
+    }
+  });
+});
+
+// Delete Instructor
+if (document.querySelector('body.courses.index') == undefined) {
+  return;
+}
+
+$('.delete-course').click(function (e) {
+  e.preventDefault();
+  let deletionUrl = e.target.getAttribute('href');
+
+  $.ajax({
+    method: 'DELETE',
+    url: deletionUrl,
+    success: function (data) {
+      $(e.target).parents('.main-instructor').remove();
+      toastr.success('Your todo has been successfully deleted');
+  }
+  });
+});
+
+// Delete Student
+if (document.querySelector('body.courses.index') == undefined) {
+  return;
+}
+
+$('.delete-course').click(function (e) {
+  e.preventDefault();
+  let deletionUrl = e.target.getAttribute('href');
+
+  $.ajax({
+    method: 'DELETE',
+    url: deletionUrl,
+    success: function (data) {
+      $(e.target).parents('.main-student').remove();
+      toastr.success('Your todo has been successfully deleted');
+  }
+  });
+});
+
+// Delete Cohort
+if (document.querySelector('body.courses.index') == undefined) {
+  return;
+}
+
+$('.delete-course').click(function (e) {
+  e.preventDefault();
+  let deletionUrl = e.target.getAttribute('href');
+
+  $.ajax({
+    method: 'DELETE',
+    url: deletionUrl,
+    success: function (data) {
+      $(e.target).parents('.main-cohort').remove();
+      toastr.success('Your todo has been successfully deleted');
+  }
+  });
+});
+
+// Log in Error
 })
 
 $(document)

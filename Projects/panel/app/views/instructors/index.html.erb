@@ -4,7 +4,7 @@
 <a href="<%=new_instructor_path%>">Create New Instructor</a>
 
 <% @instructors.each do |instructor|%>
-  <div class="">
+  <div class="main-instructor">
     <div class="">
       First Name: <%= instructor.f_name %>
     </div>
@@ -24,6 +24,6 @@
 
   <%=link_to 'View', instructor_path(instructor)%>
   <%=link_to 'Edit', edit_instructor_path(instructor)%>
-  <%=link_to 'Delete',instructor_path(instructor), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+  <%=link_to 'Delete',instructor_path(instructor), 'data-method': 'DELETE', remote: true, data: { confirm: 'Are you sure?' }  %>
 
 <%end%>

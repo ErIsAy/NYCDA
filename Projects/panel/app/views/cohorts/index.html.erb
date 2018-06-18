@@ -2,8 +2,43 @@
 
 <a href="<%=new_cohort_path%>">Create New Cohort</a>
 
+<div class="ui middle aligned center aligned grid">
+ <h3>Index Courses</h3>
+</div>
+ <a href="<%=new_course_path%>">Create New Course</a>
+
+ <div class="ui text container">
+   <table class="ui blue table">
+     <thead>
+       <tr>
+         <th>Cohort Name</th>
+         <th>Start Date</th>
+         <th>End Date</th>
+         <th>Course</th>
+         <th>Edit</th>
+         <th>Delete</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @cohorts.each do |cohort|%>
+          <tr>
+            <td> <%= cohort.name %>  </td>
+            <td> <%= cohort.start_date %> </td>
+            <td> <%= cohort.end_date %> </td>
+            <td> <%= cohort.course.name %> </td>
+            <td> <%=link_to 'Edit', edit_cohort_path(cohort)%> </td>
+            <td> <%=link_to 'Delete', cohort_path(cohort), 'data-method': 'DELETE', remote: true, class: 'delete-course', data: { confirm: 'Are you sure?' }  %> </td>
+          </tr>
+       </div>
+
+     <%end%>
+     </tbody>
+   </table>
+ </div>
+
+<!--
 <% @cohorts.each do |cohort|%>
-  <div class="">
+  <div class="main-cohort">
     <div class="">
       Cohort Name: <%= cohort.name %>
     </div>
@@ -14,11 +49,11 @@
       End Name: <%= cohort.end_date %>
     </div>
 
-    
+
   </div>
 
   <%=link_to 'View', cohort_path(cohort)%>
   <%=link_to 'Edit', edit_cohort_path(cohort)%>
-  <%=link_to 'Delete', cohort_path(cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+  <%=link_to 'Delete', cohort_path(cohort), 'data-method': 'DELETE', remote: true, data: { confirm: 'Are you sure?' }  %>
 
-<%end%>
+<%end%> -->

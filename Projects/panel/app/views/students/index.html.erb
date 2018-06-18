@@ -3,7 +3,7 @@
 <a href="<%=new_student_path%>">Create New Student</a>
 
 <% @students.each do |student|%>
-  <div class="">
+  <div class="main-student">
     <div class="">
       First Name: <%= student.f_name %>
     </div>
@@ -20,7 +20,7 @@
 
   <%=link_to 'View', student_path(student)%>
   <%=link_to 'Edit', edit_student_path(student)%>
-  <%=link_to 'Delete', student_path(student), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
+  <%=link_to 'Delete', student_path(student), 'data-method': 'DELETE',remote: true , data: { confirm: 'Are you sure?' }  %>
 
 <%end%>
 

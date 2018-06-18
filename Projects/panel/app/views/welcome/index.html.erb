@@ -1,9 +1,17 @@
-<h1>Le panel</h1>
+<h1 class="ui horizontal header divider">Le panel</h1>
 
-<%=link_to "Add Instructor To Cohorts", instructors_cohorts_path,class: "ui primary button"%>
-<%=link_to "Add Students To Cohorts", students_cohorts_path,class: "ui primary button"%>
+<div class="ui text container">
 
-<div class="">
+<div class="row">
+  <div class="center aligned column">
+    <%=link_to "Add Instructor To Cohorts", instructors_cohorts_path,class: "ui primary button"%>
+    <%=link_to "Add Students To Cohorts", students_cohorts_path,class: "ui primary button"%>
+  </div>
+</div>
+
+
+
+
   <div class="ui statistics">
 
     <div class="blue statistic">
@@ -32,48 +40,49 @@
       </div>
 
   </div>
-</div>
 
 
-<table class="ui striped blue table">
-  <thead>
-    <tr>
-      <th>Cohort</th>
-      <th>Start Date</th>
-      <th>End Date</th>
-      <th>Student</th>
-      <th>Instructor</th>
-      <th>Course</th>
-    </tr>
-  </thead>
-  <div class="column">
-    <tbody>
-      <% @cohorts.each do |cohort|%>
+  <table class="ui striped blue table">
+    <thead>
       <tr>
-        <td><%= cohort.name %></td>
-        <td><%= cohort.start_date %></td>
-        <td><%= cohort.end_date %></td>
-        <td>
-          <% cohort.students.each do |s| %>
-            <%= "#{s.f_name} #{s.l_name}" %>
-          <% end %>
-        </td>
-        <td>
-          <% cohort.instructors.each do |i| %>
-            <%= "#{i.f_name} #{i.l_name}" %>
-          <% end %>
-        </td>
-        <td>
-          <%= "#{cohort.course.name} #{cohort.course.classhours}" %>
-        </td>
+        <th>Cohort</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Student</th>
+        <th>Instructor</th>
+        <th>Course</th>
       </tr>
+    </thead>
+    <div class="">
+      <tbody>
+        <% @cohorts.each do |cohort|%>
+        <tr>
+          <td><%= cohort.name %></td>
+          <td><%= cohort.start_date %></td>
+          <td><%= cohort.end_date %></td>
+          <td>
+            <% cohort.students.each do |s| %>
+              <%= "#{s.f_name} #{s.l_name}" %>
+            <% end %>
+          </td>
+          <td>
+            <% cohort.instructors.each do |i| %>
+              <%= "#{i.f_name} #{i.l_name}" %>
+            <% end %>
+          </td>
+          <td>
+            <%= "#{cohort.course.name} #{cohort.course.classhours}" %>
+          </td>
+        </tr>
 
-      <!-- <%=link_to 'View', cohort_path(cohort)%>
-      <%=link_to 'Delete',cohort_path(cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %> -->
+        <!-- <%=link_to 'View', cohort_path(cohort)%>
+        <%=link_to 'Delete',cohort_path(cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %> -->
 
-    <%end%>
-  </tbody>
-  </div>
+      <%end%>
+    </tbody>
+    </div>
 
 
-</table>
+  </table>
+
+</div>
