@@ -7,7 +7,8 @@ class InstructorsCohortsController < ApplicationController
   def create
     InstructorsCohort.create(instructors_cohort_params)
 
-    redirect_to instructors_cohorts_path
+    # redirect_to instructors_cohorts_path
+    redirect_to welcome_index_path
   end
 
   def new

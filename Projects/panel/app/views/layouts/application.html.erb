@@ -8,17 +8,16 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-  <body class="<%= controller_name %> <%= action_name %> ui bottom attached segment">
+  <body class="<%= controller_name %> <%= action_name %> ui bottom attached segment" id='dumbo'>
 
+    <% if user_signed_in? %>
+      <%= render :partial => 'layouts/shared/menu' %>
+    <% end %>
 
-        <% if user_signed_in? %>
-          <%= render :partial => 'layouts/shared/menu' %>
-            <% end %>
+    <div class='yield'>
 
-
-      <%= yield %>
-
-
+        <%= yield %>
+    </div>
 
   </body>
 </html>

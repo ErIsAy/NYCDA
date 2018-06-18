@@ -2,11 +2,13 @@
 
   <div class="column">
 
+    <i class="massive blue lock icon"></i>
     <h2 class="ui blue image header">
-      <img src="assets/images/logo.png" class="image">
-      <div class="content">
-        < imagen- Log-in to your account
-      </div>
+      <%# <img src="assets/images/logo.png" class="image"> %>
+
+      <%# <div class="content">
+        voy a buscar una fotico que diga login
+      </div> %>
     </h2>
 
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), :html => { :class => "ui large form" }) do |f| %>
@@ -39,8 +41,16 @@
       <% end %>
       </div>
 
-
+  <div class="ui message">
     <%= render "devise/shared/links" %>
+  </div>
+
+    <% flash.each do |key, value| %>
+    <div class="ui red compact message">
+      <p><%= value %></p>
+    </div>
+    <% end %>
+
   </div>
 
 </div>

@@ -45,11 +45,11 @@ document.addEventListener("turbolinks:load", function() {
 });
 
 // Delete Instructor
-if (document.querySelector('body.courses.index') == undefined) {
+if (document.querySelector('body.instructors.index') == undefined) {
   return;
 }
 
-$('.delete-course').click(function (e) {
+$('.delete-instructor').click(function (e) {
   e.preventDefault();
   let deletionUrl = e.target.getAttribute('href');
 
@@ -64,11 +64,11 @@ $('.delete-course').click(function (e) {
 });
 
 // Delete Student
-if (document.querySelector('body.courses.index') == undefined) {
+if (document.querySelector('body.stohorts.index') == undefined) {
   return;
 }
 
-$('.delete-course').click(function (e) {
+$('.delete-stohort').click(function (e) {
   e.preventDefault();
   let deletionUrl = e.target.getAttribute('href');
 
@@ -83,11 +83,11 @@ $('.delete-course').click(function (e) {
 });
 
 // Delete Cohort
-if (document.querySelector('body.courses.index') == undefined) {
+if (document.querySelector('body.cohorts.index') == undefined) {
   return;
 }
 
-$('.delete-course').click(function (e) {
+$('.delete-cohort').click(function (e) {
   e.preventDefault();
   let deletionUrl = e.target.getAttribute('href');
 
@@ -104,39 +104,39 @@ $('.delete-course').click(function (e) {
 // Log in Error
 })
 
-$(document)
-   .ready(function() {
-     $('.ui.form')
-       .form({
-         fields: {
-           email: {
-             identifier  : 'email',
-             rules: [
-               {
-                 type   : 'empty',
-                 prompt : 'Please enter your e-mail'
-               },
-               {
-                 type   : 'email',
-                 prompt : 'Please enter a valid e-mail'
-               }
-             ]
-           },
-           password: {
-             identifier  : 'password',
-             rules: [
-               {
-                 type   : 'empty',
-                 prompt : 'Please enter your password'
-               },
-               {
-                 type   : 'length[6]',
-                 prompt : 'Your password must be at least 6 characters'
-               }
-             ]
-           }
-         }
-       })
-     ;
-   })
- ;
+// $(document)
+//    .ready(function() {
+//      $('.ui.form')
+//        .form({
+//          fields: {
+//            email: {
+//              identifier  : 'email',
+//              rules: [
+//                {
+//                  type   : 'empty',
+//                  prompt : 'Please enter your e-mail'
+//                },
+//                {
+//                  type   : 'email',
+//                  prompt : 'Please enter a valid e-mail'
+//                }
+//              ]
+//            },
+//            password: {
+//              identifier  : 'password',
+//              rules: [
+//                {
+//                  type   : 'empty',
+//                  prompt : 'Please enter your password'
+//                },
+//                {
+//                  type   : 'length[6]',
+//                  prompt : 'Your password must be at least 6 characters'
+//                }
+//              ]
+//            }
+//          }
+//        })
+//      ;
+//    })
+//  ;

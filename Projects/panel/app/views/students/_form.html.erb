@@ -1,4 +1,12 @@
-<%= form_for @student, :html => {:class => "ui form"} do |f|%>
+<div class='ui attached message'>
+  <div class='header'>
+    Student
+  </div>
+</div>
+
+
+
+<%= form_for @student, :html => {:class => "ui form attached fluid segment"} do |f|%>
 
     <div>
       <%= f.label :f_name, 'First Name' %><br>
@@ -21,9 +29,10 @@
 
     <br>
 
-    <div>
+    <div class="">
       <%= f.label :highest_completed_education,'Highest Completed Education' %><br>
-      <%= f.select :highest_completed_education, options_for_select(['HS', 'College', 'Masters', 'PHD']), prompt: 'Select One' %>
+      <!-- <%= f.select :highest_completed_education, options_for_select(['HS', 'College', 'Masters', 'PHD']), prompt: 'Select One', :class => "ui search dropdown" %> -->
+      <%= f.select(:highest_completed_education, ['HS', 'College', 'Masters', 'PHD'], {}, { :class => 'ui search dropdown' }) %>
     </div>
 
     <br>
@@ -33,7 +42,3 @@
     </div>
 
 <% end %>
-
-
-
-<!-- :f_name, :l_name, :date_of_birth, :highest_completed_education -->

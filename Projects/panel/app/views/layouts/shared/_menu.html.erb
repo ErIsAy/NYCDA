@@ -1,5 +1,5 @@
 
-<div class="ui inverted labeled icon left inline vertical sidebar menu">
+<div class="ui inverted labeled icon left inline vertical sidebar menu maroon">
   <a class="item" href="/">
     <i class="home icon" ></i> Home
   </a>
@@ -18,21 +18,12 @@
 </div>
 
 
-<div class="">
 
-  <div class="ui large top fixed hidden menu">
+  <div class="ui large top fixed hidden menu azul">
     <a class="item">
-      <i class="sidebar icon"></i> Menu
+      <i class="inverted large sidebar icon"></i>
     </a>
     <%= link_to destroy_user_session_path, method: :delete, class: "right item " do%>
-      <%content_tag(:i, "" ,class: "power off icon")%>
+      <%content_tag(:i, "" ,class: "inverted large power off icon")%>
     <%end%>
   </div>
-  <br>
-  <br>
-  <br>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <div class="ui container">
-    </div>
-    </div>

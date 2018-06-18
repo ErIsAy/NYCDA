@@ -1,31 +1,31 @@
-<h3>Student Cohor Index</h3>
+<div class='main ui container'>
 
-<%=link_to 'New Student - Cohort' ,new_students_cohort_path%>
+ <div class="ui text container">
+    <h3 class="ui block header">
+      Students - Cohorts
+    </h3>
+   <table class="ui blue table">
+     <thead>
+       <tr>
+         <th>Student</th>
+         <th>Cohort</th>
+         <th>Edit</th>
+         <th>Delete</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @students_cohorts.each do |student_cohort|%>
+          <tr>
+            <td> <%= student_cohort.student.f_name %> <%= student_cohort.student.l_name %> </td>
+            <td><%= student_cohort.cohort.name %> <%= student_cohort.cohort.start_date %> - <%= student_cohort.cohort.end_date %></td>
+            <td> <%=link_to 'Edit', edit_students_cohort_path(student_cohort), class: 'ui primary basic button'%> </td>
+            <td> <%=link_to 'Delete', edit_students_cohort_path(student_cohort), 'data-method': 'DELETE', remote: true, class: 'delete-course ui negative basic button', data: { confirm: 'Are you sure?' }  %> </td>
+          </tr>
 
-<br>
-<br>
-<br>
+       </div>
 
-<% @students_cohorts.each do |student_cohort|%>
-
-  <div class="">
-    <div class="">
-      Student: <%= student_cohort.student.f_name %> <%= student_cohort.student.l_name %>
-    </div>
-    <div class="">
-      Cohort: <%= student_cohort.cohort.name %> <%= student_cohort.cohort.start_date %> - <%= student_cohort.cohort.end_date %>
-    </div>
-  </div>
-
-  <%=link_to 'View', students_cohort_path(student_cohort)%>
-  <%=link_to 'Edit', edit_students_cohort_path(student_cohort)%>
-  <%=link_to 'Delete', students_cohort_path(student_cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
-
-<%end%>
-
-<!-- new_students_cohort GET    /students_cohort/new(.:format)                 students_cohort#new
-edit_students_cohort GET    /students_cohort/:id/edit(.:format)                students_cohort#edit
-    students_cohort GET    /students_cohort/:id(.:format)                      students_cohort#show
-                    PATCH  /students_cohort/:id(.:format)                      students_cohort#update
-                    PUT    /students_cohort/:id(.:format)                      students_cohort#update
-                    DELETE /students_cohort/:id(.:format)                      students_cohort#destroy -->
+     <%end%>
+     </tbody>
+   </table>
+  <a class='ui primary button' href="<%=new_course_path%>">Create New Course</a>
+ </div>

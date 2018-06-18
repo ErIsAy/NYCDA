@@ -1,23 +1,31 @@
-<h3>Instructor Cohorts</h3>
+<div class='main ui container'>
 
-<%= link_to 'Create Instructor-Cohort', new_instructors_cohort_path%>
+ <div class="ui text container">
+    <h3 class="ui block header">
+      Instructor - Cohorts
+    </h3>
+   <table class="ui blue table">
+     <thead>
+       <tr>
+         <th>Instructor</th>
+         <th>Cohort</th>
+         <th>Edit</th>
+         <th>Delete</th>
+     </tr>
+   </thead>
+   <tbody>
+     <% @instructors_cohorts.each do |instructor_cohort|%>
+          <tr>
+            <td> <%= instructor_cohort.instructor.f_name %> <%= instructor_cohort.instructor.l_name %>  </td>
+            <td><%= instructor_cohort.cohort.name %> <%= instructor_cohort.cohort.start_date %> - <%= instructor_cohort.cohort.end_date %></td>
+            <td> <%=link_to 'Edit', edit_instructors_cohort_path(instructor_cohort), class: 'ui primary basic button'%> </td>
+            <td> <%=link_to 'Delete', edit_instructors_cohort_path(instructor_cohort), 'data-method': 'DELETE', remote: true, class: 'delete-course ui negative basic button', data: { confirm: 'Are you sure?' }  %> </td>
+          </tr>
 
-<br>
-<br>
-<br>
+       </div>
 
-<% @instructors_cohorts.each do |instructor_cohort|%>
-  <div class="">
-    <div class="">
-      Instructor: <%= instructor_cohort.instructor.f_name %> <%= instructor_cohort.instructor.l_name %>
-    </div>
-    <div class="">
-      Cohort: <%= instructor_cohort.cohort.name %> <%= instructor_cohort.cohort.start_date %> - <%= instructor_cohort.cohort.end_date %>
-    </div>
-  </div>
-
-  <%=link_to 'View', instructors_cohort_path(instructor_cohort)%>
-  <%=link_to 'Edit', edit_instructors_cohort_path(instructor_cohort)%>
-  <%=link_to 'Delete', instructors_cohort_path(instructor_cohort), 'data-method': 'DELETE', data: { confirm: 'Are you sure?' }  %>
-
-<%end%>
+     <%end%>
+     </tbody>
+   </table>
+  <a class='ui primary button' href="<%=new_course_path%>">Create New Course</a>
+ </div>

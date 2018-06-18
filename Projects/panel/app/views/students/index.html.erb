@@ -1,38 +1,44 @@
-<h3>Students</h3>
+<h2 class="ui horizontal header divider">Students</h2>
+<br>
+<br>
 
-<a href="<%=new_student_path%>">Create New Student</a>
+<div class="ui container">
 
-<% @students.each do |student|%>
-  <div class="main-student">
-    <div class="">
-      First Name: <%= student.f_name %>
-    </div>
-    <div class="">
-      Last Name: <%= student.l_name %>
-    </div>
-    <div class="">
-      Date Of Birth: <%= student.date_of_birth %>
-    </div>
-    <div class="">
-      Highest Completed Education: <%= student.highest_completed_education %>
+  <div class="ui button container">
+
+    <a href="<%=new_student_path%>" class="ui primary button">Create New Student</a>
+
+  </div>
+
+  <div class="yield">
+    <div class="main ui cointainer">
+
+      <div class="ui cards three">
+        <% @students.each do |student|%>
+        <div class="card main-instructor">
+          <div class="content">
+            <!-- <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg"> -->
+            <i class="right floated huge user circle icon"></i>
+            <div class="header">
+              <%= "#{student.f_name}  #{student.l_name}" %>
+            </div>
+            <div class="description">
+              Date Of Birth: <%= student.date_of_birth %><br>
+              Highest Completed Education: <%= student.highest_completed_education %>
+            </div>
+          </div>
+          <div class="extra content">
+            <div class="ui two buttons">
+              <%=link_to 'Edit', edit_student_path(student), class: "ui basic blue button"%>
+              <%=link_to 'Delete',student_path(student), 'data-method': 'DELETE', class: "ui basic red button", remote: true, data: { confirm: 'Are you sure?'}  %>
+            </div>
+          </div>
+        </div>
+        <%end%>
+      </div>
+
     </div>
   </div>
 
-  <%=link_to 'View', student_path(student)%>
-  <%=link_to 'Edit', edit_student_path(student)%>
-  <%=link_to 'Delete', student_path(student), 'data-method': 'DELETE',remote: true , data: { confirm: 'Are you sure?' }  %>
 
-<%end%>
-
-
-<!-- :f_name, :l_name, :date_of_birth, :highest_completed_education -->
-<!--
-#
-# students GET    /students(.:format)                                                                      students#index
-#          POST   /students(.:format)                                                                      students#create
-# new_student GET    /students/new(.:format)                                                               students#new
-# edit_student GET    /students/:id/edit(.:format)                                                         students#edit
-#  student GET    /students/:id(.:format)                                                                  students#show
-#          PATCH  /students/:id(.:format)                                                                  students#update
-#          PUT    /students/:id(.:format)                                                                  students#update
-#          DELETE /students/:id(.:format)                                                                  students#destroy -->
+</div>

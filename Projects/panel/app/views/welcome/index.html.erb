@@ -1,22 +1,28 @@
-<h1 class="ui horizontal header divider">Le panel</h1>
-
 <div class="ui text container">
-
-<div class="row">
-  <div class="center aligned column">
-    <%=link_to "Add Instructor To Cohorts", instructors_cohorts_path,class: "ui primary button"%>
-    <%=link_to "Add Students To Cohorts", students_cohorts_path,class: "ui primary button"%>
-  </div>
+  <h2 class="ui horizontal header divider"> Welcome </h2>
 </div>
 
+<h1 class="ui horizontal header divider"><%= @user.username %></h1>
 
+<br>
+<br>
+<br>
+<div class="ui text container">
 
+<div class="two ui button container">
 
-  <div class="ui statistics">
+    <%=link_to "Add Instructor To Cohorts", instructors_cohorts_path,class: "ui primary button"%>
+    <%=link_to "Add Students To Cohorts", students_cohorts_path,class: "ui primary button"%>
+
+</div>
+
+<br>
+
+  <div class="ui three statistics">
 
     <div class="blue statistic">
         <div class="value">
-
+          <%= @students.count %>
         </div>
         <div class="label">
           Students
@@ -24,7 +30,7 @@
       </div>
       <div class="teal statistic">
         <div class="value">
-          8
+          <%= @instructors.count %>
         </div>
         <div class="label">
           Instructors
@@ -32,7 +38,7 @@
       </div>
       <div class="gray statistic">
         <div class="value">
-          28
+         <%= @courses.count %>
         </div>
         <div class="label">
           Courses
@@ -41,7 +47,11 @@
 
   </div>
 
+<br>
 
+</div>
+
+<div class='ui container'>
   <table class="ui striped blue table">
     <thead>
       <tr>
@@ -62,16 +72,16 @@
           <td><%= cohort.end_date %></td>
           <td>
             <% cohort.students.each do |s| %>
-              <%= "#{s.f_name} #{s.l_name}" %>
+              <%= "#{s.f_name} #{s.l_name}, " %>
             <% end %>
           </td>
           <td>
             <% cohort.instructors.each do |i| %>
-              <%= "#{i.f_name} #{i.l_name}" %>
+              <%= "#{i.f_name} #{i.l_name}, " %>
             <% end %>
           </td>
           <td>
-            <%= "#{cohort.course.name} #{cohort.course.classhours}" %>
+            <%= "#{cohort.course.name} - #{cohort.course.classhours}" %>
           </td>
         </tr>
 
@@ -84,5 +94,4 @@
 
 
   </table>
-
-</div>
+  </div>

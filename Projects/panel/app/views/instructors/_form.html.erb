@@ -1,4 +1,10 @@
-<%= form_for @instructor do |f|%>
+<div class='ui attached message'>
+  <div class='header'>
+    Instructor
+  </div>
+</div>
+
+<%= form_for @instructor, :html => {:class => "ui form attached fluid segment"}  do |f|%>
 
     <div>
       <%= f.label :f_name, 'First Name' %><br>

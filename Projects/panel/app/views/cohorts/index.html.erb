@@ -1,13 +1,13 @@
-<h3>Index Cohorts</h3>
 
-<a href="<%=new_cohort_path%>">Create New Cohort</a>
+<div class='main ui container'>
 
-<div class="ui middle aligned center aligned grid">
- <h3>Index Courses</h3>
-</div>
- <a href="<%=new_course_path%>">Create New Course</a>
+
 
  <div class="ui text container">
+    <h3 class="ui block header">
+      Cohort
+    </h3>
+
    <table class="ui blue table">
      <thead>
        <tr>
@@ -26,15 +26,22 @@
             <td> <%= cohort.start_date %> </td>
             <td> <%= cohort.end_date %> </td>
             <td> <%= cohort.course.name %> </td>
-            <td> <%=link_to 'Edit', edit_cohort_path(cohort)%> </td>
-            <td> <%=link_to 'Delete', cohort_path(cohort), 'data-method': 'DELETE', remote: true, class: 'delete-course', data: { confirm: 'Are you sure?' }  %> </td>
+            <td> <%=link_to 'Edit', edit_cohort_path(cohort), class: 'ui primary basic button'%> </td>
+            <td> <%=link_to 'Delete', cohort_path(cohort), 'data-method': 'DELETE', remote: true, class: 'delete-course ui negative basic button', data: { confirm: 'Are you sure?' }  %> </td>
           </tr>
        </div>
 
      <%end%>
      </tbody>
    </table>
+   <a class = 'ui primary button' href="<%=new_cohort_path%>">Create New Cohort</a>
+
+
  </div>
+</div>
+
+
+
 
 <!--
 <% @cohorts.each do |cohort|%>
