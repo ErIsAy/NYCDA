@@ -99,6 +99,10 @@ $('.delete-cohort').click(function (e) {
       toastr.success('Your todo has been successfully deleted');
   }
   });
+
+  $('.ui.dropdown').dropdown();
+
+
 });
 
 // Log in Error

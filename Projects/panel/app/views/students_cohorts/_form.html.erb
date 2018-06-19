@@ -1,11 +1,15 @@
-<%= form_for @student_cohort do |f|%>
+<div class='ui attached message'>
+  <div class='header'>
+    Add Student
+  </div>
+</div>
 
-    <br>
+<%= form_for @student_cohort, :html => {:class => "ui form attached fluid segment"} do |f|%>
 
-    <div class="">
-      <%= f.label :student_id, 'Select Student:' %><br>
-      <%= f.select :student_id, options_for_select(@students.collect {|i| [ i.f_name, i.id ] }, {include_blank: 'Select Student'})%>
-    </div>
+<div class="">
+  <%= f.label :student_id, 'Select Student:' %><br>
+  <%= f.select :student_id, options_for_select(@students.collect {|i| [ i.f_name, i.id ] }, {include_blank: 'Select Student'})%>
+</div>
 
     <br>
 
@@ -17,7 +21,7 @@
     <br>
 
     <div>
-    <%= f.submit %>
+    <%= f.submit "Add"%>
     </div>
 
 <% end %>

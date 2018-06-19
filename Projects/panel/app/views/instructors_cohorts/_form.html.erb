@@ -1,6 +1,10 @@
-<%= form_for @instructor_cohort do |f|%>
+<div class='ui attached message'>
+  <div class='header'>
+    Add Instructor
+  </div>
+</div>
 
-    <br>
+<%= form_for @instructor_cohort, :html => {:class => "ui form attached fluid segment"} do |f|%>
 
     <div class="">
       <%= f.label :instructor_id, 'Select Instructor:' %><br>
@@ -17,7 +21,7 @@
     <br>
 
     <div>
-    <%= f.submit %>
+    <%= f.submit "Add"%>
     </div>
 
 <% end %>
