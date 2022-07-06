@@ -1,9 +1,11 @@
 <div class="card clinical-case-show">
     <h2 class="blog-post-title"><%= @post.title %></h2>
+    <!-- nice use of strftime -->
     <p class="blog-post-meta"><%= @post.created_at.strftime("%m/%d/%Y")%><a href="#"> By <%=@post.user.first_name%></a></p>
 
     <div>
-        <img class="" style="margin: 15px auto;" src=<%= @post.image %> alt="Card image cap" height="250" width: "200">
+    	<!-- move these inline styles into a css file -->
+        <img class="" style="margin: 15px auto;" src="<%= @post.image %>" alt="Card image cap" height="250" width: "200">
     </div>
     
     <p>
